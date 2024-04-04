@@ -27,7 +27,7 @@ const takePhoto = () => {
         canvas.width = video.videoWidth;
         canvas.height = video.videoHeight;
         canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-        
+
         // Obtém a foto como um data URL
         let photoDataUrl = canvas.toDataURL('image/png');
 
@@ -36,9 +36,6 @@ const takePhoto = () => {
         photoElement.src = photoDataUrl;
         photoElement.style.display = 'block';
         let paragraph = document.getElementById('paragraph');
-        paragraph.innerHTML = "muito feio"
         console.log("Foto capturada:", photoDataUrl);
     }
 }
-
-window.onload = openCamera;

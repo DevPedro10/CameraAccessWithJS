@@ -7,30 +7,42 @@
     <title>Camera Access</title>
     <script src="index.js"></script>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+
         #videoElement {
             display: block;
-            margin: auto;
+            margin: 20px auto;
             width: 300px;
-            height: auto;
-            border: 1px solid black;
+            height: 225px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: #e6e6e6;
         }
 
         #photoElement {
-            margin: auto;
-            display: block;
+            margin: 20px auto;
+            display: none;
             width: 400px;
             height: auto;
-            border: 1px solid black;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: #e6e6e6;
         }
 
         .btnTakePhoto {
             display: block;
-            margin: 10px auto;
+            margin: 20px auto;
             padding: 10px 20px;
             font-size: 16px;
             background-color: #4CAF50;
             color: white;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
         }
 
@@ -41,12 +53,10 @@
 </head>
 
 <body>
+    <button onclick="openCamera()" class="btnTakePhoto">Abrir Câmera</button>
     <video id="videoElement" autoplay></video>
-
     <button onclick="takePhoto()" class="btnTakePhoto">Tirar Foto</button>
-    <img id="photoElement" src="" alt="Foto Capturada" style="display:none;">
-    <p id="paragraph"></p>
-
+    <img id="photoElement" src="" alt="Foto Capturada">
 
 </body>
 
