@@ -6,19 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camera Access</title>
     <script src="index.js"></script>
+    <style>
+        #videoElement {
+            display: block;
+            margin: auto;
+            width: 300px;
+            height: auto;
+            border: 1px solid black;
+        }
+
+        #photoElement {
+            margin: auto;
+            display: block;
+            width: 400px;
+            height: auto;
+            border: 1px solid black;
+        }
+
+        .btnTakePhoto {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Elemento de vídeo para exibir o fluxo da câmera -->
     <video id="videoElement" autoplay></video>
 
-    <!-- Botão para tirar uma foto -->
-    <button onclick="takePhoto()">Tirar Foto</button>
-
-    <!-- Elemento de imagem para exibir a foto tirada -->
+    <button onclick="takePhoto()" class="btnTakePhoto">Tirar Foto</button>
     <img id="photoElement" src="" alt="Foto Capturada" style="display:none;">
+    <p id="paragraph"></p>
 
-   
+
 </body>
 
 </html>
